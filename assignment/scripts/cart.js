@@ -26,9 +26,9 @@ function addItem(item) {
 // addItem('socks');
 // addItem('peaches');
 // addItem('oat milk');
-// console.log('adding goat milk. should return true:', addItem('goat milk'));
-// console.log('adding goat milk again. should return true:', addItem('goat milk'));
-// console.log('adding forbidden ammount of goat milk, basket should not allow. Expect false:', addItem('goat milk'));
+// console.log('addItem("goat milk") should return true:', addItem('goat milk'));
+// console.log('addItem("goat milk") again. should return true:', addItem('goat milk'));
+// console.log('addItem("goat milk") brings basket to a forbidden ammount of goat milk. Expect false:', addItem('goat milk'));
 
 // - Create a function called `listItems`. It should:
 // - loop over the items in the `basket` array
@@ -38,13 +38,13 @@ function listItems() {
         console.log(i);
     }
 }
-// console.log('running listItems:', listItems());
+// console.log('listItems():', listItems());
 
 // - Create a function called `empty`. It should:
 // - reset the `basket` to an empty array
 function empty(){
     basket.length = 0;
-    //console.log('in empty. basket should be empty:', basket);
+    //console.log('empty(). expect basket to be empty array', basket);
 }
 
 //  Create a function called isFull(). It should:
@@ -57,10 +57,10 @@ function isFull() {
         return true;
     }
 }
-// console.log('testing isFull. Basket contains 4 items, should return false:', isFull());
+// console.log('isFull(). Basket contains 4 items, should return false:', isFull());
 // //also tested w/ 5 items and 6 items in basket, passed
 // empty();
-// console.log('testing isFull. Basket is empty, should return false:', isFull());
+// console.log('isFull(). Basket is empty, should return false:', isFull());
 
 // 4. Create a function called `removeItem`. It should:
 //   - Take an input parameter for a string `item`
@@ -70,7 +70,7 @@ function isFull() {
 function removeItem(item) {
     let removeIndex = basket.indexOf(item);
     if (removeIndex !== -1) {
-        //console.log(`Index of item to be removed: ${removeIndex}`)
+        //console.log(`In removeItem(). Index of item to be removed: ${removeIndex}`)
         let removedItem = basket.splice(removeIndex, 1);
         return removedItem;
     } else {
@@ -78,6 +78,6 @@ function removeItem(item) {
     }
 }
 // listItems();
-// console.log('removing socks. should return socks', removeItem('socks'));
-// console.log('removing Christopher Walken. should return null', removeItem('Christopher Walken'));
+// console.log('removeItem("Socks") should return socks', removeItem('socks'));
+// console.log('removeItem("ChristpherWalken") should return null', removeItem('Christopher Walken'));
 // listItems();
